@@ -22,7 +22,7 @@ class ServerSettings(
     private companion object {
         fun socket2path(addr: SocketAddress): Path {
             return (addr as? InetSocketAddress)?.let {
-                "multiplayer" / it.toString().urlEncoded
+                "multiplayer" / it.getHostName().urlEncoded
             } ?: "singleplayer".toPath()
         }
     }

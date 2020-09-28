@@ -54,7 +54,7 @@ class GuiSettingsSpelling : SettingPanel<TabbySettings>() {
             if (missing.isEmpty()) {
                 add(GuiLabel("No missing locales (yet)".toComponent()), intArrayOf(0, 2))
             } else {
-                add(GuiLabel("click this button to download these word lists.".toComponent()), intArrayOf(0, 2))
+				add(GuiLabel("Click above to download word dictionaries:".toComponent()), intArrayOf(0, 2))
                 for ((y, loc) in missing.withIndex()) {
                     add(GuiLabel(loc.toString().toComponent()), intArrayOf(1, y + 3))
                 }
